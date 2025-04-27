@@ -34,3 +34,22 @@ $ yarn build:mac
 # For Linux
 $ yarn build:linux
 ```
+
+
+### 如何捕获桌面流
+
+1. desktopCapturer.getSources({
+  types: ['window', 'screen'],
+}) 提取chromeMediaSourceId
+
+2. navigator.mediaDevices.getUserMedia({
+  audio: false,
+  video: {
+    mandatory: {
+      chromeMediaSource: 'desktop',
+      chromeMediaSourceId: chromeMediaSourceId,
+      width,
+      height,
+    },
+  },
+})
