@@ -1,7 +1,7 @@
 
 import { memo, useState, useEffect } from 'react';
 import { Button, Input } from 'antd';
-import './index.scss';
+// import './index.scss';
 const ControlPanel = (): React.JSX.Element => {
   const [controlCode, setControlCode] = useState(''); // 自身控制码
   const [targetControlCode, setTargetControlCode] = useState(''); // 目标控制码

@@ -1,5 +1,5 @@
 import { ipcMain } from 'electron'
-
+import { desktopCapturer } from 'electron'
 const initIpc = (): void => {
   // 生成控制码
   ipcMain.handle('generateControlCode', () => {
@@ -10,6 +10,11 @@ const initIpc = (): void => {
   ipcMain.handle('control', (event, controlCode) => {
     console.log(controlCode)
   })
+
+  ipcMain.handle(
+    'DESKTOP_CAPTURER_GET_SOURCES',
+    (event, opts) => desktopCapturer.getSources(opts)
+  )
 }
 
 export default initIpc
