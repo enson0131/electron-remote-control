@@ -24,6 +24,8 @@
     "@electron-toolkit/preload": "^3.0.1",
     "@electron-toolkit/utils": "^4.0.0",
     "antd": "^5.24.8",
+    "node-gyp": "^11.2.0",
+    "robotjs": "^0.6.0",
     "vite-plugin-electron-renderer": "^0.14.6"
   },
   "devDependencies": {
